@@ -61,10 +61,6 @@ html {
   font-style: normal;
 }
 
-.large {
-  max-width: 100%;
-}
-
 .normal {
   max-width: 75vh;
 }
@@ -164,4 +160,10 @@ blue {
 
 text {
   color: #e6dc7c;
+}
+
+@media (max-width: 860px) {
+  .normal {
+    max-width: 100%;
+  }
 }

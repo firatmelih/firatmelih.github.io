@@ -40,9 +40,3 @@ async function fetchGithub() {
 
 fetchGithub();
 
-// fetch nedir?
-// fetch: bi fonksiyon request atmanı sağlıyor sunuculara,
-// ilk argümanı sunucuya atmak istediğin url, ikinci argüman da objeyi nasıl atmak istediğini belirten config örnek json,xml
-// await'i kullanmak için async olarak tanımlamak gerekir fonksiyonu
-//method ile 'GET' diyerek, POST client sidedan sunucuya veri gönderir.
-// GET sunucudan cliente veri istiyorsun
