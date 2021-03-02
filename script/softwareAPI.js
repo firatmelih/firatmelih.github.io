@@ -21,7 +21,7 @@ async function fetchGithub() {
     const firstContent = document.createTextNode(repo.name);
     const secondContent = document.createTextNode(repo.language);
     const thirdContent = document.createTextNode(
-      repo.created_at.substring(0, 10)
+      repo.updated_at.substring(0, 10)
     );
 
     td1.appendChild(firstContent);
