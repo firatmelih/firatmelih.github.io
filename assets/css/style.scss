@@ -198,6 +198,7 @@ body {
       height: 100%;
       width: 100%;
       & > * {
+        cursor: pointer;
         height: 100%;
         width: 100%;
         color: white;
@@ -254,7 +255,7 @@ body {
         a {
           display: none;
         }
-        p {
+        h3 {
           font-size: 75;
           font-weight: 750;
           padding-bottom: 2rem;

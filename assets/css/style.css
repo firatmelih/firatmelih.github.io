@@ -227,6 +227,7 @@ body main #about {
 }
 
 body main #about > * {
+  cursor: pointer;
   height: 100%;
   width: 100%;
   color: white;
@@ -271,7 +272,7 @@ body main #about > * a {
   display: none;
 }
 
-body main #about > * p {
+body main #about > * h3 {
   font-size: 75;
   font-weight: 750;
   padding-bottom: 2rem;
