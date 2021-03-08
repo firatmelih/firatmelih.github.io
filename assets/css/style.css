@@ -43,12 +43,17 @@ body .side-nav img {
 
 body header {
   color: black !important;
+  transition: left 0.5s ease-in-out !important;
+}
+
+body header.clicked {
+  left: 0 !important;
 }
 
 body header.scrolled {
   padding-top: 5rem;
   position: fixed;
-  left: 0;
+  left: -160px;
   top: 0;
   background-color: black;
   height: 100%;
@@ -126,15 +131,15 @@ body main {
 body main #welcome {
   width: 100%;
   height: 1000px;
-  transition: 1s;
+  transition: 0.2s;
 }
 
 body main #welcome.scrolled {
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 body main #welcome h1 {
-  transition: 1s;
+  transition: 0.2s;
   padding-top: 5rem;
   padding-bottom: 5rem;
   text-align: center;
@@ -221,7 +226,7 @@ body main #about {
   width: 100%;
 }
 
-body main #about div {
+body main #about > * {
   height: 100%;
   width: 100%;
   color: white;
@@ -233,46 +238,46 @@ body main #about div {
   transition: 1s;
 }
 
-body main #about div:hover {
+body main #about > *:hover {
   cursor: pointer;
   padding-top: 2rem;
 }
 
-body main #about div:hover:nth-child(1) {
+body main #about > *:hover:nth-child(1) {
   background: linear-gradient(to right, rgba(1, 41, 29, 0.808), rgba(3, 25, 44, 0.897)), url(../img/programmer.gif);
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-body main #about div:hover:nth-child(2) {
+body main #about > *:hover:nth-child(2) {
   background: linear-gradient(to right, rgba(3, 1, 34, 0.911), rgba(35, 2, 58, 0.87)), url(../img/computer.gif);
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-body main #about div:hover:nth-child(3) {
+body main #about > *:hover:nth-child(3) {
   background: linear-gradient(to right, rgba(49, 53, 0, 0.959), rgba(66, 38, 1, 0.87)), url(../img/bench.gif);
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-body main #about div:hover:nth-child(4) {
+body main #about > *:hover:nth-child(4) {
   background: linear-gradient(to right, rgba(3, 3, 3, 0.75), rgba(0, 0, 0, 0.75)), url(../img/portfolio.gif);
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-body main #about div a {
+body main #about > * a {
   display: none;
 }
 
-body main #about div p {
+body main #about > * p {
   font-size: 75;
   font-weight: 750;
   padding-bottom: 2rem;
 }
 
-body main #about div img {
+body main #about > * img {
   padding-bottom: 2rem;
   padding-top: 2rem;
   height: 75px;
