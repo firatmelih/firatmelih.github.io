@@ -7,6 +7,7 @@
   padding: 0;
   margin: 0;
   color: white;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 
 }
@@ -42,6 +43,7 @@ body {
     }
     img {
       height: 35px;
+      width: auto;
     }
   }
   header {
@@ -234,8 +236,7 @@ body {
         &.shift-left
         {
           position: relative;
-          left: auto;
-          right: 100%;
+          left: -100%;
         }
         }
        
@@ -300,8 +301,8 @@ body {
         img {
           padding-bottom: 2rem;
           padding-top: 2rem;
-          height: 75px;
-          width: 75px;
+          height: 150px;
+          width: auto;
         }
       }
       #info{
@@ -348,18 +349,24 @@ body {
     }
     #hiddens
     {
+            
+
+      transition: 2s;
       position: absolute;
-      left: 160;
+      left: 200;
       right: 0;
       right: 200;
       top:1096px;
       z-index: 55;
+
       .hidden-about
       {
-        z-index: 55;
+        z-index: 0;
+        position: absolute;
+        top:0;
         background-color: #fff;
         height: 100vh;
-        width: 105%;
+        width: 100%;
         color: black;
         display: flex;
         text-align:center;
@@ -367,9 +374,68 @@ body {
         align-items: center;
         font-size: 5vw;
     }
-   
+    .hidden-resume
+    {
+      z-index: 0;
+        position: absolute;
+        top:0;
+        background-color: green;
+        height: 100vh;
+        width: 100%;
+        color: black;
+        display: flex;
+        text-align:center;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 5vw;
+    }
+    .hidden-portfolio
+    {
+      z-index: 0;
+        position: absolute;
+        top:0;
+        background-color: yellow;
+        height: 100vh;
+        width: 100%;
+        color: black;
+        display: flex;
+        text-align:center;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 5vw;
+    }
+    .hidden-tools
+    {
+      z-index: 0;
+        position: absolute;
+        top:0;
+        background-color: pink;
+        height: 100vh;
+        width: 100%;
+        color: black;
+        display: flex;
+        text-align:center;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 5vw;
+    }
   }
-  
+  .close-about
+{
+  color: #fff;
+  position:absolute;
+  top: 1200;
+  right: 225px;
+  z-index: 2001;
+  cursor: pointer;
+  background-color: black;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 25px;
+}
 }
   
 

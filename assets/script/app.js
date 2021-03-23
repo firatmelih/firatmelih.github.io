@@ -1,4 +1,7 @@
 'use strict';
+
+// INITIAL
+document.querySelector('.close-about').style.display='none';
 //Typer Coded by github.com/firatmelih && Decleration phase.
 async function Typer() {
     if (j == txt.length) {
@@ -103,41 +106,78 @@ const tools = document.querySelector('#tools');
 
 
 const about = document.querySelector('#about');
-var stopped=false;
+var stopped=true;
+
 about.addEventListener('click', ()=>
 {
+    document.querySelector('#hiddens').style.opacity = '1';
+    window.location.href='#about';
     resume.classList.add('shift-right');
     tools.classList.add('shift-right');
     info.classList.add('shift-left');
     portfolio.classList.add('shift-left');
+    document.querySelector('.close-about').style.display='block';
+})
+
+document.querySelector('.close-about').addEventListener('click', ()=>
+{
+    document.querySelector('.close-about').style.display='none';
+    document.querySelector('#hiddens').style.opacity = '0';
+
+    document.querySelector('body').classList.add('stop-scrolling');
+    resume.classList.add('shift-right');
+    tools.classList.add('shift-right');
+    info.classList.add('shift-left');
+    portfolio.classList.add('shift-left');
+
+        resume.classList.remove('shift-right');
+        tools.classList.remove('shift-right');
+        info.classList.remove('shift-left');
+        portfolio.classList.remove('shift-left');
     
-    if(stopped)
-    {
-        document.querySelector('body').classList.remove('stop-scrolling');
-        document.querySelector('.hidden-resume').classList.add('test');
-    }
-    else
+    if(!stopped)
     {
         document.querySelector('body').classList.add('stop-scrolling');
-        document.querySelector('.hidden-resume').classList.remove('test');
     }
     stopped=!stopped;
 })
 
+document.querySelector('.close-about').addEventListener('click',()=>
+{
+    document.querySelector('body').classList.remove('stop-scrolling');
+
+   
+})
+
 resume.addEventListener('click',()=>
 {
-    
-
+    document.querySelector('.close-about').style.display='block';
+    $(".hidden-resume").css("z-index", "2000");
+    $(".hidden-tools").css("z-index", "1999");
+    $(".hidden-portfolio").css("z-index", "1999");
+    $(".hidden-about").css("z-index", "1999");
 })
 tools.addEventListener('click',()=>
 {
-    
+    document.querySelector('.close-about').style.display='block';
+    $(".hidden-resume").css("z-index", "1999");
+    $(".hidden-tools").css("z-index", "2000");
+    $(".hidden-portfolio").css("z-index", "1999");
+    $(".hidden-about").css("z-index", "1999");
 })
 info.addEventListener('click',()=>
 {
-    
+    document.querySelector('.close-about').style.display='block';
+    $(".hidden-resume").css("z-index", "1999");
+    $(".hidden-tools").css("z-index", "1999");
+    $(".hidden-portfolio").css("z-index", "1999");
+    $(".hidden-about").css("z-index", "2000");
 })
 portfolio.addEventListener('click',()=>
 {
-    
+    document.querySelector('.close-about').style.display='block';
+    $(".hidden-resume").css("z-index", "1999");
+    $(".hidden-tools").css("z-index", "1999");
+    $(".hidden-portfolio").css("z-index", "2000");
+    $(".hidden-about").css("z-index", "1999");
 })
