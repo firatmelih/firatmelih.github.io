@@ -197,6 +197,10 @@ body {
       grid-gap: 2px;
       height: 100%;
       width: 100%;
+      transition: 2s;
+  
+      
+
       & > * {
         cursor: pointer;
         height: 100%;
@@ -207,21 +211,26 @@ body {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        transition: 1s;
+        transition: 2s;
         &:hover {
+          
           cursor: pointer;
-          padding-top: 2rem;
-          &:nth-child(1) {
+          &:nth-child(1) {           
+            padding-top: 3rem; 
+
             background: linear-gradient(
-                to right,
+              
+                to right,          
                 rgba(1, 41, 29, 0.808),
                 rgba(3, 25, 44, 0.897)
               ),
               url(../img/programmer.gif);
             background-repeat: no-repeat;
-            background-size: 100%;
+            background-size: 130%;
           }
           &:nth-child(2) {
+            padding-top: 3rem; 
+
             background: linear-gradient(
                 to right,
                 rgba(3, 1, 34, 0.911),
@@ -239,7 +248,7 @@ body {
               ),
               url(../img/bench.gif);
             background-repeat: no-repeat;
-            background-size: 100%;
+            background-size: 130%;
           }
           &:nth-child(4) {
             background: linear-gradient(
@@ -249,16 +258,19 @@ body {
               ),
               url(../img/portfolio.gif);
             background-repeat: no-repeat;
-            background-size: 100%;
+            background-size: 120%;
           }
+          
         }
         a {
           display: none;
+          
         }
         h3 {
           font-size: 75;
           font-weight: 750;
           padding-bottom: 2rem;
+         
         }
         img {
           padding-bottom: 2rem;
@@ -274,8 +286,8 @@ body {
             rgba(14, 134, 233, 0.6)
           ),
           url(../img/programmer.gif);
-        background-repeat: no-repeat;
-        background-size: 100%;
+        background-repeat: no-repeat;        
+        background-size: 150%;
       }
       div:nth-child(2) {
         background: linear-gradient(
@@ -285,7 +297,7 @@ body {
           ),
           url(../img/computer.gif);
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 150%;
       }
       div:nth-child(3) {
         background: linear-gradient(
@@ -295,7 +307,7 @@ body {
           ),
           url(../img/bench.gif);
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 150%;
       }
       div:nth-child(4) {
         background: linear-gradient(
@@ -305,7 +317,7 @@ body {
           ),
           url(../img/portfolio.gif);
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 150%;
       }
     }
   }
