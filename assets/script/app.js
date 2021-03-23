@@ -93,3 +93,51 @@ document.querySelector('.side-nav').addEventListener('click', () => {
 
     }
 })
+
+const info = document.querySelector('#info');
+const resume = document.querySelector('#resume');
+const portfolio = document.querySelector('#portfolio');
+const tools = document.querySelector('#tools');
+
+
+
+
+const about = document.querySelector('#about');
+var stopped=false;
+about.addEventListener('click', ()=>
+{
+    resume.classList.add('shift-right');
+    tools.classList.add('shift-right');
+    info.classList.add('shift-left');
+    portfolio.classList.add('shift-left');
+    
+    if(stopped)
+    {
+        document.querySelector('body').classList.remove('stop-scrolling');
+        document.querySelector('.hidden-resume').classList.add('test');
+    }
+    else
+    {
+        document.querySelector('body').classList.add('stop-scrolling');
+        document.querySelector('.hidden-resume').classList.remove('test');
+    }
+    stopped=!stopped;
+})
+
+resume.addEventListener('click',()=>
+{
+    
+
+})
+tools.addEventListener('click',()=>
+{
+    
+})
+info.addEventListener('click',()=>
+{
+    
+})
+portfolio.addEventListener('click',()=>
+{
+    
+})
