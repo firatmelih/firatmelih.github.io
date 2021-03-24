@@ -2,6 +2,41 @@
 
 // INITIAL
 document.querySelector('.close-about').style.display='none';
+
+
+async function smth()
+{
+var y=75;
+$('.left').css("display",`block`); 
+$('.right').css("display",`block`); 
+for(let x=0; x<75; x++)
+{
+ 
+    y--;
+    await sleep(10);
+    // Standard syntax
+    $('.left').css("transform",`skewY(${y}deg)`); 
+    $('.left').css("-ms-transform",`skewY(${y}deg)`); 
+    $('.right').css("transform",`skewY(${-y}deg)`); 
+    $('.right').css("-ms-transform",`skewY(${-y}deg)`); 
+}
+}
+
+async function smthrev()
+{
+
+for(let x=0; x<25; x++)
+{
+    await sleep(30);
+    // Standard syntax
+    $('.left').css("transform",`skewY(${x}deg)`); 
+    $('.left').css("-ms-transform",`skewY(${x}deg)`); 
+    $('.right').css("transform",`skewY(${-x}deg)`); 
+    $('.right').css("-ms-transform",`skewY(${-x}deg)`); 
+}
+$('.left').css("display",`none`); 
+$('.right').css("display",`none`); 
+}
 //Typer Coded by github.com/firatmelih && Decleration phase.
 async function Typer() {
     if (j == txt.length) {
@@ -121,6 +156,7 @@ about.addEventListener('click', ()=>
 
 document.querySelector('.close-about').addEventListener('click', ()=>
 {
+    smthrev();
     document.querySelector('.close-about').style.display='none';
     document.querySelector('#hiddens').style.opacity = '0';
 
@@ -144,40 +180,53 @@ document.querySelector('.close-about').addEventListener('click', ()=>
 
 document.querySelector('.close-about').addEventListener('click',()=>
 {
+    
     document.querySelector('body').classList.remove('stop-scrolling');
 
    
 })
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+
+
 resume.addEventListener('click',()=>
 {
+    smth();
     document.querySelector('.close-about').style.display='block';
-    $(".hidden-resume").css("z-index", "2000");
-    $(".hidden-tools").css("z-index", "1999");
-    $(".hidden-portfolio").css("z-index", "1999");
-    $(".hidden-about").css("z-index", "1999");
+    $(".hidden-resume").css("display", "flex");
+    $(".hidden-tools").css("display", "none");
+    $(".hidden-portfolio").css("display", "none");
+    $(".hidden-about").css("display", "none");
+
+    
 })
 tools.addEventListener('click',()=>
 {
+
+   
     document.querySelector('.close-about').style.display='block';
-    $(".hidden-resume").css("z-index", "1999");
-    $(".hidden-tools").css("z-index", "2000");
-    $(".hidden-portfolio").css("z-index", "1999");
-    $(".hidden-about").css("z-index", "1999");
+    $(".hidden-resume").css("display", "none");
+    $(".hidden-tools").css("display", "block");
+    $(".hidden-portfolio").css("display", "none");
+    $(".hidden-about").css("display", "none");
 })
 info.addEventListener('click',()=>
 {
     document.querySelector('.close-about').style.display='block';
-    $(".hidden-resume").css("z-index", "1999");
-    $(".hidden-tools").css("z-index", "1999");
-    $(".hidden-portfolio").css("z-index", "1999");
-    $(".hidden-about").css("z-index", "2000");
+    $(".hidden-resume").css("display", "none");
+    $(".hidden-tools").css("display", "none");
+    $(".hidden-portfolio").css("display", "none");
+    $(".hidden-about").css("display", "block");
 })
 portfolio.addEventListener('click',()=>
 {
     document.querySelector('.close-about').style.display='block';
-    $(".hidden-resume").css("z-index", "1999");
-    $(".hidden-tools").css("z-index", "1999");
-    $(".hidden-portfolio").css("z-index", "2000");
-    $(".hidden-about").css("z-index", "1999");
+    $(".hidden-resume").css("display", "none");
+    $(".hidden-tools").css("display", "none");
+    $(".hidden-portfolio").css("display", "block");
+    $(".hidden-about").css("display", "none");
 })
+

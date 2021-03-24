@@ -230,7 +230,7 @@ body main #about {
   grid-gap: 0;
   height: 100%;
   width: 100%;
-  transition: 2s;
+  transition: 1s;
 }
 
 body main #about #resume, body main #about #info, body main #about #tools, body main #about #portfolio {
@@ -243,7 +243,7 @@ body main #about #resume, body main #about #info, body main #about #tools, body 
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: 2s;
+  transition: 1s;
   position: relative;
   top: 0;
   left: 0;
@@ -332,9 +332,9 @@ body main #tools {
 body #hiddens {
   transition: 2s;
   position: absolute;
-  left: 200;
+  left: 160;
   right: 0;
-  right: 200;
+  right: 160;
   top: 1096px;
   z-index: 55;
 }
@@ -348,17 +348,37 @@ body #hiddens .hidden-about {
   width: 100%;
   color: black;
   display: flex;
+  flex-direction: column;
+  padding: 2rem;
   text-align: center;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 5vw;
+}
+
+body #hiddens .hidden-about h3 {
+  padding: 2rem;
+  font-size: 75;
+  text-align: center;
+  color: black;
+}
+
+body #hiddens .hidden-about h4 {
+  padding: 2rem;
+  color: black;
+  font-size: 30;
+  text-align: center;
+}
+
+body #hiddens .hidden-about p {
+  padding: 0 5rem 2rem 5rem;
+  font-weight: 200;
+  text-align: start;
+  color: black;
 }
 
 body #hiddens .hidden-resume {
   z-index: 0;
   position: absolute;
   top: 0;
-  background-color: green;
+  background-color: none;
   height: 100vh;
   width: 100%;
   color: black;
@@ -367,6 +387,20 @@ body #hiddens .hidden-resume {
   justify-content: space-around;
   align-items: center;
   font-size: 5vw;
+}
+
+body #hiddens .hidden-resume .left {
+  color: black;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+body #hiddens .hidden-resume .right {
+  color: black;
+  height: 100%;
+  width: 100%;
+  background-color: white;
 }
 
 body #hiddens .hidden-portfolio {
@@ -409,6 +443,8 @@ body .close-about {
   background-color: black;
   height: 25px;
   display: flex;
+  padding: 0;
+  justify-items: center;
   align-items: center;
   justify-content: center;
   text-align: center;
