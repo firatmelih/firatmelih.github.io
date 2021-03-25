@@ -102,11 +102,12 @@ window.addEventListener('scroll', () => {
         document.querySelector('.side-nav').style.display = 'none';
         document.querySelector('header').classList.remove('scrolled');
         document.querySelector('#welcome').classList.remove('scrolled');
-        if(scrollX<1366)
-    {
-        document.querySelector('header').classList.add('scrolled');
         
     }
+    if(window.screen.width<1366)
+    {
+        document.querySelector('header').classList.add('scrolled');
+
     }
 })
 
