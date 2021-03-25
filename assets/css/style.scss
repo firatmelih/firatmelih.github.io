@@ -55,7 +55,7 @@ body {
     }
   }
   header {
-    .left
+    .first
     {
       padding-right: 2rem;
       display: flex;
@@ -102,8 +102,8 @@ body {
       text-align: center;
       nav {
         display: block;
-        .left,
-        .right {
+        .first,
+        .second {
           padding-top: 2rem;
           display: block;
           ul {
@@ -125,12 +125,12 @@ body {
     display: flex;
     align-items: center;
     transition: width 5s;
-    .left {
+    .first {
       padding-left: 2rem;
       font-size: 1.5rem;
       color: aqua;
     }
-    .right {
+    .second {
       ul {
         display: flex;
         flex-direction: row;

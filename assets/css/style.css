@@ -62,7 +62,7 @@ body header {
   transition: left 0.5s ease-in-out !important;
 }
 
-body header .left {
+body header .first {
   padding-right: 2rem;
   display: flex;
   justify-content: center;
@@ -117,20 +117,20 @@ body header.scrolled nav {
   display: block;
 }
 
-body header.scrolled nav .left,
-body header.scrolled nav .right {
+body header.scrolled nav .first,
+body header.scrolled nav .second {
   padding-top: 2rem;
   display: block;
 }
 
-body header.scrolled nav .left ul,
-body header.scrolled nav .right ul {
+body header.scrolled nav .first ul,
+body header.scrolled nav .second ul {
   text-align: center;
   display: block;
 }
 
-body header.scrolled nav .left ul a,
-body header.scrolled nav .right ul a {
+body header.scrolled nav .first ul a,
+body header.scrolled nav .second ul a {
   transition: 0.3s;
 }
 
@@ -143,31 +143,31 @@ body nav {
   transition: width 5s;
 }
 
-body nav .left {
+body nav .first {
   padding-left: 2rem;
   font-size: 1.5rem;
   color: aqua;
 }
 
-body nav .right ul {
+body nav .second ul {
   display: flex;
   flex-direction: row;
 }
 
-body nav .right ul li {
+body nav .second ul li {
   padding: 2rem;
   list-style: none;
 }
 
-body nav .right ul li:hover {
+body nav .second ul li:hover {
   background-color: #007777;
 }
 
-body nav .right ul li:last-child:hover {
+body nav .second ul li:last-child:hover {
   background-color: #02ac79;
 }
 
-body nav .right ul li a {
+body nav .second ul li a {
   background: none;
   text-decoration: none;
   list-style: none;
