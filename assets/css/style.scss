@@ -55,6 +55,14 @@ body {
     }
   }
   header {
+    .left
+    {
+      padding-right: 2rem;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
     @media only screen and (max-width: 1366px) {
       display: none;
       text-align: center;
@@ -91,7 +99,7 @@ body {
       height: 100%;
       width: 160px;
       overflow-x: hidden;
-      text-align: start;
+      text-align: center;
       nav {
         display: block;
         .left,
@@ -571,7 +579,7 @@ body {
                   width:20vw;
                   font-weight: 500;
                   text-align: start;  
-                  font-size: 15;
+                  font-size: 13;
                   width:100%;
                   padding: 2rem;
                 }
@@ -617,14 +625,15 @@ body {
          
             li
             {
+              
               color: #4ece99;
               .date
               {
-                padding: 1vw;
+                padding: 10 5 10 5;
                 display: inline-block;
                 color: #4ece99;
                 width: auto;
-                font-size: 25;
+                font-size: 20;
                 border: 1px solid #4ece99;
                 font-weight: 500;
                 @media only screen and (max-width: 1366px) {      
@@ -635,7 +644,7 @@ body {
               }
               .title
               {
-                padding: 2rem 2rem 2rem 0;
+                padding: 2rem 2rem 0rem 0;
                 font-size: 25;
                 width:20vw;
                 font-weight: 500;
@@ -655,8 +664,8 @@ body {
               .company
               {
                 
-                padding: 2rem 2rem 2rem 0;
-                font-size: 1.3vw;
+                padding: 2rem 2rem 0rem 0;
+                font-size: 1vw;
                 font-weight: 350;
                 text-align: start;
                 color: gray;
@@ -666,7 +675,7 @@ body {
                   width:20vw;
                   font-weight: 500;
                   text-align: start;
-                  font-size: 15;
+                  font-size: 12;
                   width:100%;
                   padding: 1rem;
                 }

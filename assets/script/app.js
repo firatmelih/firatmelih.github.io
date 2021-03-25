@@ -90,8 +90,7 @@ document.querySelector('.side-nav').addEventListener('click', () => {
     if (navIsClicked) {
         document.querySelector('.side-nav-img').classList.add('close');
         document.querySelector('.close').classList.remove('side-nav-img');
-
-        document.querySelector('#welcome').classList.add('scrolled');
+        // document.querySelector('#welcome').classList.add('scrolled');
         document.querySelector('header').classList.add('scrolled');
         document.querySelector('header').classList.add('clicked');
     }
@@ -101,40 +100,40 @@ document.querySelector('.side-nav').addEventListener('click', () => {
         document.querySelector('.side-nav').style.display = 'flex';
         document.querySelector('header').classList.remove('clicked');
     }
-   
 })
-
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 90 && !navIsClicked) {
+    if (window.scrollY > 30 && !navIsClicked) {
         // document.querySelector('header').style.display = 'none';
         document.querySelector('.side-nav').style.display = 'flex'
-        document.querySelector('#welcome').classList.add('scrolled');
+        // document.querySelector('#welcome').classList.add('scrolled');
         document.querySelector('header').classList.add('scrolled');
     }
-    if (navIsClicked && window.scrollY > 90) {
+    if (navIsClicked && window.scrollY > 30) {
         document.querySelector('header').classList.add('scrolled');
-        document.querySelector('#welcome').classList.add('scrolled');
+        // document.querySelector('#welcome').classList.add('scrolled');
         document.querySelector('.side-nav').style.display = 'flex';
     }
     else if (window.scrollY == 0) {
         // document.querySelector('header').style.display = 'block';
         document.querySelector('.side-nav').style.display = 'none';
         document.querySelector('header').classList.remove('scrolled');
-        document.querySelector('#welcome').classList.remove('scrolled');
-       
-        
+        // document.querySelector('#welcome').classList.remove('scrolled');
+        if(window.screen.width<1366)
+        {
+            document.querySelector('header').classList.add('scrolled');
+        }
     }
-    if(window.screen.width>1366 && window.scrollY < 5 && navIsClicked) 
+    if(window.screen.width>1366 && window.scrollY < 30 && navIsClicked) 
     {
         document.querySelector('header').classList.remove('scrolled');
-        document.querySelector('#welcome').classList.remove('scrolled');
+        // document.querySelector('#welcome').classList.remove('scrolled');
         document.querySelector('header').classList.remove('clicked');
     }
     
-    if(window.screen.width>1366 && window.scrollY > 5 && navIsClicked)
+    if(window.screen.width>1366 && window.scrollY > 30 && navIsClicked)
     {
         document.querySelector('header').classList.add('scrolled');
-        document.querySelector('#welcome').classList.add('scrolled');
+        // document.querySelector('#welcome').classList.add('scrolled');
         document.querySelector('header').classList.add('clicked');
     }
     
