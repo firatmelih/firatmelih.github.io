@@ -104,7 +104,7 @@ window.addEventListener('scroll', () => {
         document.querySelector('#welcome').classList.remove('scrolled');
         
     }
-    if(window.screen.width<1366)
+    if(window.screen.width<1366)  
     {
         document.querySelector('header').classList.add('scrolled');
 
