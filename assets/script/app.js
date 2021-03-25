@@ -6,10 +6,10 @@ document.querySelector('.close-about').style.display='none';
 
 async function smth()
 {
-var y=75;
+var y=35;
 $('.left').css("display",`block`); 
 $('.right').css("display",`block`); 
-for(let x=0; x<75; x++)
+for(let x=0; x<35; x++)
 {
  
     y--;
@@ -22,21 +22,7 @@ for(let x=0; x<75; x++)
 }
 }
 
-async function smthrev()
-{
 
-for(let x=0; x<25; x++)
-{
-    await sleep(30);
-    // Standard syntax
-    $('.left').css("transform",`skewY(${x}deg)`); 
-    $('.left').css("-ms-transform",`skewY(${x}deg)`); 
-    $('.right').css("transform",`skewY(${-x}deg)`); 
-    $('.right').css("-ms-transform",`skewY(${-x}deg)`); 
-}
-$('.left').css("display",`none`); 
-$('.right').css("display",`none`); 
-}
 //Typer Coded by github.com/firatmelih && Decleration phase.
 async function Typer() {
     if (j == txt.length) {
@@ -156,7 +142,6 @@ about.addEventListener('click', ()=>
 
 document.querySelector('.close-about').addEventListener('click', ()=>
 {
-    smthrev();
     document.querySelector('.close-about').style.display='none';
     document.querySelector('#hiddens').style.opacity = '0';
 
@@ -205,8 +190,6 @@ resume.addEventListener('click',()=>
 })
 tools.addEventListener('click',()=>
 {
-
-   
     document.querySelector('.close-about').style.display='block';
     $(".hidden-resume").css("display", "none");
     $(".hidden-tools").css("display", "block");

@@ -387,6 +387,11 @@ body #hiddens .hidden-resume {
   justify-content: space-around;
   align-items: center;
   font-size: 5vw;
+  color: black;
+}
+
+body #hiddens .hidden-resume * {
+  color: black;
 }
 
 body #hiddens .hidden-resume .left {
@@ -396,11 +401,107 @@ body #hiddens .hidden-resume .left {
   background-color: white;
 }
 
+body #hiddens .hidden-resume .left h5 {
+  padding: 2rem;
+  font-size: 50;
+}
+
+body #hiddens .hidden-resume .left img {
+  height: 50px;
+  width: 50px;
+}
+
+body #hiddens .hidden-resume .left .work {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 0rem 3vw 0rem;
+}
+
+body #hiddens .hidden-resume .left .work li {
+  color: #4ece99;
+}
+
+body #hiddens .hidden-resume .left .work li .date {
+  padding: 1vw;
+  display: inline-block;
+  color: #4ece99;
+  width: auto;
+  font-size: 25;
+  border: 1px solid #4ece99;
+  font-weight: 500;
+}
+
+body #hiddens .hidden-resume .left .work li .title {
+  padding: 2vw 2vw 2vw 0;
+  font-size: 1.5vw;
+  width: 20vw;
+  font-weight: 500;
+  text-align: start;
+}
+
+body #hiddens .hidden-resume .left .work li .company {
+  padding: 2rem 2rem 2rem 0;
+  font-size: 1.3vw;
+  font-weight: 350;
+  text-align: start;
+  color: gray;
+}
+
 body #hiddens .hidden-resume .right {
   color: black;
   height: 100%;
   width: 100%;
   background-color: white;
+}
+
+body #hiddens .hidden-resume .right img {
+  height: 50px;
+  width: 50px;
+}
+
+body #hiddens .hidden-resume .right h5 {
+  padding: 2rem;
+  font-size: 3vw;
+}
+
+body #hiddens .hidden-resume .right .work {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 0rem 1vw 0rem;
+}
+
+body #hiddens .hidden-resume .right .work li {
+  font-size: 5vw;
+  color: #4ece99;
+}
+
+body #hiddens .hidden-resume .right .work li .date {
+  padding: 0.7vw;
+  display: inline-block;
+  color: #4ece99;
+  width: auto;
+  font-size: 1vw;
+  border: 1px solid #4ece99;
+  font-weight: 500;
+}
+
+body #hiddens .hidden-resume .right .work li .title {
+  padding: 1vw 1vw 1vw 0;
+  font-size: 1.3vw;
+  font-weight: 500;
+  text-align: start;
+}
+
+body #hiddens .hidden-resume .right .work li .company {
+  padding: 1vw 1vw 1vw 0;
+  font-size: 1vw;
+  font-weight: 350;
+  text-align: start;
+  color: gray;
 }
 
 body #hiddens .hidden-portfolio {

@@ -26,6 +26,7 @@ body {
     align-items: center;
     justify-content: center;
     display: none;
+
     color: pink;
     background-color: none;
     position: fixed;
@@ -396,6 +397,10 @@ body {
     }
     .hidden-resume
     {
+      *
+      {
+        color: black;
+      }
       z-index: 0;
         position: absolute;
         top:0;
@@ -408,20 +413,124 @@ body {
         justify-content: space-around;
         align-items: center;
         font-size: 5vw;
+        color: black;
         .left
         {
           color: black;
           width: 100%;
           height: 100%;
           background-color: white;
+          h5
+          {
+            padding: 2rem;
+            font-size: 50;
+          }
+          img
+          {
+            height: 50px;
+            width: 50px;
+          }
+          .work
+          {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+            padding: 0rem 0rem 3vw 0rem;
+         
+            li
+            {
+              color: #4ece99;
+              .date
+              {
+                padding: 1vw;
+                display: inline-block;
+                color: #4ece99;
+                width: auto;
+                font-size: 25;
+                border: 1px solid #4ece99;
+                font-weight: 500;
+              }
+              .title
+              {
+                padding: 2vw 2vw 2vw 0;
+                font-size: 1.5vw;
+                width:20vw;
+                font-weight: 500;
+                text-align: start;
+
+              }
+              .company
+              {
+                padding: 2rem 2rem 2rem 0;
+                font-size: 1.3vw;
+                font-weight: 350;
+                text-align: start;
+                color: gray;
+              }
+            }
+            
+          }
+          
         }
         .right
         {
+          img
+          {
+            height: 50px;
+            width: 50px;
+          }
           color: black;
 
           height: 100%;
           width: 100%;
           background-color: white;
+          h5
+          {
+            padding: 2rem;
+            font-size: 3vw;
+          }
+          
+          .work
+          {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+            padding: 0rem 0rem 1vw 0rem;
+         
+            li
+            {
+              font-size: 5vw;
+              color: #4ece99;
+              .date
+              {
+                padding: 0.7vw;
+                display: inline-block;
+                color: #4ece99;
+                width: auto;
+                font-size: 1vw;
+                border: 1px solid #4ece99;
+                font-weight: 500;
+              }
+              .title
+              {
+                padding: 1vw 1vw 1vw 0;
+                font-size: 1.3vw;
+                font-weight: 500;
+                text-align: start;
+
+              }
+              .company
+              {
+                padding: 1vw 1vw 1vw 0;
+                font-size: 1vw;
+                font-weight: 350;
+                text-align: start;
+                color: gray;
+              }
+            }
+          }
         }
     }
     .hidden-portfolio
