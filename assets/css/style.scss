@@ -421,21 +421,19 @@ body {
         left: 0;
         right: 0;
       }
-
       transition: 2s;
       position: absolute;
       left: 160;
       right: 160;
-      top:1096px;
+      top:1030px;
       z-index: 55;
-
+      height: 100%;
       .hidden-about
       {
         @media only screen and (max-width: 1366px) {      
           height: 100%;
           width: 100%;
           background-color: #fff;
-
         }
   
         z-index: 0;

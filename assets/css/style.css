@@ -415,8 +415,9 @@ body #hiddens {
   position: absolute;
   left: 160;
   right: 160;
-  top: 1096px;
+  top: 1030px;
   z-index: 55;
+  height: 100%;
 }
 
 @media only screen and (max-width: 1366px) {
