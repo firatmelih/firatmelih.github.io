@@ -19,6 +19,13 @@ body {
   }
   background-image: url('/assets/img/background.png');
   .side-nav {
+    @media only screen and (max-width: 1366px) {
+      z-index: 99999;
+      display: block !important;
+      position: fixed;
+    left: 53.3333333333px;
+    top: 53.3333333333px;
+    }
     cursor: pointer;
     height: 53.3333333333px;
     width: 53.3333333333px;
@@ -48,12 +55,34 @@ body {
     }
   }
   header {
+    @media only screen and (max-width: 1366px) {
+      display: none;
+      text-align: center;
+    }
     color: black !important;
     transition: left 0.5s ease-in-out !important;
     &.clicked {
+
       left: 0 !important;
+      right: 0 ;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+        height: 100%;
+        width: 100%;
     }
     &.scrolled {
+      @media only screen and (max-width: 1366px) {
+        z-index: 10000;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        position: fixed;
+        left: -1000px;
+        top: 0;
+        height: 100%;
+        width: 100%;
+      }
       padding-top: 5rem;
       position: fixed;
       left: -160px;
@@ -81,6 +110,7 @@ body {
     }
   }
   nav {
+    
     transition: 1s;
     background-color: black;
     justify-content: space-between;
@@ -115,11 +145,19 @@ body {
     }
   }
   main {
+    @media only screen and (max-width: 1366px) {
+      margin: 0;
+      #welcome
+      {
+        
+      }
+    }
     padding-top: 2rem;
     // transition: 1s;
     margin: 0 160px 0 160px;
     background-color: rgba(0, 0, 0, 0.781);
     #welcome {
+     
       width: 100%;
       height: 1000px;
       transition: 0.2s;
@@ -142,8 +180,12 @@ body {
         margin-left: 33%;
         justify-content: center;
         h2 {
+          @media only screen and (max-width: 1366px) {
+            font-size: 15px;
+            padding: 0.2vw 0.2vw 0.2vw 0;
+          }
           padding: 0.5vw 0.5vw 0.5vw 0;
-          font-size: 30px;
+          font-size: 2.5vw;
           &:nth-child(2) {
             padding-right: 0;
           }
@@ -164,8 +206,8 @@ body {
             justify-content: center;
             align-items: center;
             justify-items: center;
-            width: 32px;
-            height: 32px;
+            width: 50px;
+            height: 50px;
           }
         }
         .scroll {
@@ -179,14 +221,14 @@ body {
           .mouse {
             margin: 0;
             padding: 0;
-            width: 45px;
-            height: 45px;
+            width: 65px;
+            height: 65px;
           }
           .wheel {
             transition: 1s;
             position: relative;
-            top: -10px;
-            left: -27px;
+            top: -20px;
+            left: -37px;
             width: 10px;
             height: 10px;
           }
@@ -199,8 +241,16 @@ body {
       }
     }
     #about {
-      
-      
+      @media only screen and (max-width: 1366px) {
+        grid-template-columns: repeat(1, 1fr);
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+      }
+      overflow: hidden;
       color: white;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -212,7 +262,11 @@ body {
         
         #resume, #info, #tools, #portfolio
         {
-          
+          @media only screen and(max-width: 1366px)
+          {
+            height: 500px;
+             width: 100%;
+          }
         z-index: 500;
         cursor: pointer;
         height: 100%;
@@ -229,6 +283,13 @@ body {
         left: 0;
         right: 0;
         padding: 0;
+
+        p
+        {
+          text-align: center;
+          padding: 2px;
+        }
+
           &.shift-right
         {
           position: relative;
@@ -350,18 +411,30 @@ body {
     }
     #hiddens
     {
-            
+      @media only screen and (max-width: 1366px) {      
+        height: 150%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
 
       transition: 2s;
       position: absolute;
       left: 160;
-      right: 0;
       right: 160;
       top:1096px;
       z-index: 55;
 
       .hidden-about
       {
+        @media only screen and (max-width: 1366px) {      
+          height: 100%;
+          width: 100%;
+          background-color: #fff;
+
+        }
+  
         z-index: 0;
         position: absolute;
         top:0;
@@ -401,6 +474,11 @@ body {
       {
         color: black;
       }
+      @media only screen and (max-width: 1366px) {      
+        height: 100vh;
+        width: 100%;
+       
+      }
       z-index: 0;
         position: absolute;
         top:0;
@@ -416,6 +494,7 @@ body {
         color: black;
         .left
         {
+          
           color: black;
           width: 100%;
           height: 100%;
@@ -423,12 +502,21 @@ body {
           h5
           {
             padding: 2rem;
-            font-size: 50;
+            font-size: 3vw;
+            @media only screen and (max-width: 1366px) {      
+              font-size: 30px;
+             
+            }
           }
           img
           {
             height: 50px;
             width: 50px;
+            @media only screen and (max-width: 1366px) {      
+              height: 35;
+            width: 35;
+             
+            }
           }
           .work
           {
@@ -450,23 +538,48 @@ body {
                 font-size: 25;
                 border: 1px solid #4ece99;
                 font-weight: 500;
+                @media only screen and (max-width: 1366px) {      
+                  font-size: 10;
+                  padding: 1vw;
+
+                }
               }
               .title
               {
-                padding: 2vw 2vw 2vw 0;
-                font-size: 1.5vw;
+                padding: 2rem 2rem 2rem 0;
+                font-size: 25;
                 width:20vw;
                 font-weight: 500;
                 text-align: start;
+                @media only screen and (max-width: 1366px) {    
+                  padding: 2rem 2rem 2rem 0;
+                  font-size: 25;
+                  width:20vw;
+                  font-weight: 500;
+                  text-align: start;  
+                  font-size: 15;
+                  width:100%;
+                  padding: 2rem;
+                }
 
               }
               .company
               {
-                padding: 2rem 2rem 2rem 0;
+                padding: 2vw 2vw 2vw 0;
                 font-size: 1.3vw;
                 font-weight: 350;
                 text-align: start;
                 color: gray;
+                @media only screen and (max-width: 1366px) {    
+                  padding: 2rem 2rem 2rem 0;
+                  font-size: 25;
+                  width:20vw;
+                  font-weight: 500;
+                  text-align: start;  
+                  font-size: 15;
+                  width:100%;
+                  padding: 2rem;
+                }
               }
             }
             
@@ -475,22 +588,30 @@ body {
         }
         .right
         {
+          
+          color: black;
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          h5
+          {
+            padding: 1rem;
+            font-size: 3vw;
+            @media only screen and (max-width: 1366px) {      
+              font-size: 30px;
+             
+            }
+          }
           img
           {
             height: 50px;
             width: 50px;
+            @media only screen and (max-width: 1366px) {      
+              height: 35;
+            width: 35;
+             
+            }
           }
-          color: black;
-
-          height: 100%;
-          width: 100%;
-          background-color: white;
-          h5
-          {
-            padding: 2rem;
-            font-size: 3vw;
-          }
-          
           .work
           {
             display: flex;
@@ -501,35 +622,62 @@ body {
          
             li
             {
-              font-size: 5vw;
               color: #4ece99;
               .date
               {
-                padding: 0.7vw;
+                padding: 1vw;
                 display: inline-block;
                 color: #4ece99;
                 width: auto;
-                font-size: 1vw;
+                font-size: 25;
                 border: 1px solid #4ece99;
                 font-weight: 500;
+                @media only screen and (max-width: 1366px) {      
+                  font-size: 10;
+                  padding: 1vw;
+
+                }
               }
               .title
               {
-                padding: 1vw 1vw 1vw 0;
-                font-size: 1.3vw;
+                padding: 2rem 2rem 2rem 0;
+                font-size: 25;
+                width:20vw;
                 font-weight: 500;
                 text-align: start;
+                padding: 1vw 1vw 1vw 0;
+                font-size: 25;
+                width:20vw;
+                font-weight: 500;
+                text-align: start;
+                @media only screen and (max-width: 1366px) {      
+                  font-size: 15;
+                  width:100%;
+                  padding: 2rem;
+                }
 
               }
               .company
               {
-                padding: 1vw 1vw 1vw 0;
-                font-size: 1vw;
+                
+                padding: 2rem 2rem 2rem 0;
+                font-size: 1.3vw;
                 font-weight: 350;
                 text-align: start;
                 color: gray;
+                @media only screen and (max-width: 1366px) {      
+                  padding: 2rem 2rem 2rem 0;
+                  font-size: 25;
+                  width:20vw;
+                  font-weight: 500;
+                  text-align: start;
+                  font-size: 15;
+                  width:100%;
+                  padding: 1rem;
+                }
               }
             }
+            
           }
         }
     }
@@ -566,6 +714,11 @@ body {
   }
   .close-about
 {
+  @media only screen and (max-width: 1366px) {      
+    position:absolute;
+  top: 1200;
+  right: 30;
+  }
   color: #fff;
   position:absolute;
   top: 1200;
