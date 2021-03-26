@@ -293,7 +293,7 @@ body main #about {
 @media only screen and (max-width: 1366px) {
   body main #about {
     grid-template-columns: repeat(1, 1fr);
-    height: auto;
+    height: 200%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -322,7 +322,7 @@ body main #about #resume, body main #about #info, body main #about #tools, body 
 
 @media only screen and (max-width: 1366px) {
   body main #about #resume, body main #about #info, body main #about #tools, body main #about #portfolio {
-    height: 500px;
+    height: 50%;
     width: 100%;
   }
 }
@@ -347,13 +347,19 @@ body main #about:hover {
 }
 
 body main #about:hover #info:hover {
-  background: linear-gradient(to right, rgba(1, 41, 29, 0.808), rgba(3, 25, 44, 0.897)), url(../img/programmer.gif);
+  background: linear-gradient(to right, rgba(1, 85, 60, 0.808), rgba(3, 25, 44, 0.938)), url(../img/programmer.gif);
   background-repeat: no-repeat;
   background-size: 130%;
 }
 
+@media only screen and (max-width: 1366px) {
+  body main #about:hover #info:hover {
+    background-size: 135%;
+  }
+}
+
 body main #about:hover #resume:hover {
-  background: linear-gradient(to right, rgba(3, 1, 34, 0.911), rgba(35, 2, 58, 0.87)), url(../img/computer.gif);
+  background: linear-gradient(to right, rgba(3, 0, 37, 0.719), rgba(32, 1, 53, 0.87)), url(../img/computer.gif);
   background-repeat: no-repeat;
   background-size: 150%;
 }
@@ -389,25 +395,51 @@ body main #about img {
 body main #info {
   background: linear-gradient(to right, rgba(0, 255, 179, 0.6), rgba(14, 134, 233, 0.6)), url(../img/programmer.gif);
   background-repeat: no-repeat;
-  background-size: 1000px;
+  background-size: 100%;
+}
+
+@media only screen and (max-width: 1366px) {
+  body main #info {
+    background-size: 130%;
+  }
 }
 
 body main #resume {
+  transition: opacity 2s linear;
+  opacity: 1;
   background: linear-gradient(to right, rgba(9, 3, 95, 0.2), rgba(88, 2, 146, 0.6)), url(../img/computer.gif);
   background-repeat: no-repeat;
-  background-size: 1000px;
+  background-size: 100%;
+}
+
+@media only screen and (max-width: 1366px) {
+  body main #resume {
+    background-size: 100%;
+  }
 }
 
 body main #portfolio {
   background: linear-gradient(to right, rgba(238, 255, 0, 0.301), rgba(241, 137, 0, 0.6)), url(../img/bench.gif);
   background-repeat: no-repeat;
-  background-size: 1000px;
+  background-size: 100%;
+}
+
+@media only screen and (max-width: 1366px) {
+  body main #portfolio {
+    background-size: 130%;
+  }
 }
 
 body main #tools {
   background: linear-gradient(to right, rgba(3, 3, 3, 0.6), rgba(0, 0, 0, 0.6)), url(../img/portfolio.gif);
   background-repeat: no-repeat;
-  background-size: 1000px;
+  background-size: 100%;
+}
+
+@media only screen and (max-width: 1366px) {
+  body main #tools {
+    background-size: 130%;
+  }
 }
 
 body #hiddens {
@@ -422,7 +454,7 @@ body #hiddens {
 
 @media only screen and (max-width: 1366px) {
   body #hiddens {
-    height: 150%;
+    height: 200%;
     width: 100%;
     position: absolute;
     left: 0;
@@ -495,7 +527,7 @@ body #hiddens .hidden-resume * {
 
 @media only screen and (max-width: 1366px) {
   body #hiddens .hidden-resume {
-    height: 100vh;
+    height: 100%;
     width: 100%;
   }
 }
@@ -707,7 +739,7 @@ body #hiddens .hidden-portfolio {
   position: absolute;
   top: 0;
   background-color: yellow;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   color: black;
   display: flex;
@@ -722,7 +754,7 @@ body #hiddens .hidden-tools {
   position: absolute;
   top: 0;
   background-color: pink;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   color: black;
   display: flex;
@@ -756,4 +788,19 @@ body .close-about {
     top: 1200;
     right: 30;
   }
+}
+
+body footer {
+  padding-bottom: 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  z-index: 100340050;
+}
+
+body footer #copyright {
+  color: aqua;
+  background-color: black;
+  padding: 15px;
+  text-align: center;
 }
