@@ -302,7 +302,10 @@ body main #about {
   }
 }
 
-body main #about #resume, body main #about #info, body main #about #tools, body main #about #portfolio {
+body main #about #resume,
+body main #about #info,
+body main #about #tools,
+body main #about #portfolio {
   z-index: 500;
   cursor: pointer;
   height: 100%;
@@ -321,23 +324,35 @@ body main #about #resume, body main #about #info, body main #about #tools, body 
 }
 
 @media only screen and (max-width: 1366px) {
-  body main #about #resume, body main #about #info, body main #about #tools, body main #about #portfolio {
+  body main #about #resume,
+  body main #about #info,
+  body main #about #tools,
+  body main #about #portfolio {
     height: 50%;
     width: 100%;
   }
 }
 
-body main #about #resume p, body main #about #info p, body main #about #tools p, body main #about #portfolio p {
+body main #about #resume p,
+body main #about #info p,
+body main #about #tools p,
+body main #about #portfolio p {
   text-align: center;
   padding: 2px;
 }
 
-body main #about #resume.shift-right, body main #about #info.shift-right, body main #about #tools.shift-right, body main #about #portfolio.shift-right {
+body main #about #resume.shift-right,
+body main #about #info.shift-right,
+body main #about #tools.shift-right,
+body main #about #portfolio.shift-right {
   position: relative;
   left: 100%;
 }
 
-body main #about #resume.shift-left, body main #about #info.shift-left, body main #about #tools.shift-left, body main #about #portfolio.shift-left {
+body main #about #resume.shift-left,
+body main #about #info.shift-left,
+body main #about #tools.shift-left,
+body main #about #portfolio.shift-left {
   position: relative;
   left: -100%;
 }
