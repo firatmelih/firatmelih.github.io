@@ -1,0 +1,16 @@
+@use "@/styles/vars" as *;
+
+.TSection {
+  display: flex;
+  flex-direction: column;
+  padding: 200px 0;
+  gap: 50px;
+
+  h1 {
+
+  }
+
+  &__content {
+
+  }
+}

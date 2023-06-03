@@ -1,0 +1,72 @@
+// VARS
+
+$color-green: #1ed916;
+$color-orange: #ff7900;
+$color-yellow: #fff500;
+$color-blue: #03c5ff;
+$white: #fff;
+$gray: rgb(148, 148, 148);
+
+
+$spacer: 15px;
+$duration: .3s;
+$easing: ease;
+
+
+// MAPPERS
+
+$text-color-variants: (
+  "orange": $color-orange,
+  "yellow": $color-yellow,
+  "blue": $color-blue,
+  "green": $color-green,
+  "white": $white,
+  "gray": $gray,
+);
+
+$font-size-variants: (
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "p",
+  "sm"
+);
+
+$font-weight-variants: (
+  "light":300,
+  "regular":400,
+  "medium": 500,
+  "title": 600,
+  "bold":700,
+  "bolder":800,
+  "boldest":900
+);
+
+$spacers: (
+  1: 5px,
+  2: 10px,
+  3: $spacer,
+  4: 30px,
+  5: 50px,
+  6: 90px
+);
+
+$breakpoints: (
+  extreme: 0,
+  mobile: 576px,
+  tablet: 768px,
+  laptop: 992px,
+  desktop: 1200px,
+  large-desktop: 1400px,
+  fullhd: 1920px
+);
+
+// MIXINS
+
+@mixin below($bp-name) {
+  @media only screen and (max-width: map-get($breakpoints, $bp-name)) {
+    @content;
+  }
+}

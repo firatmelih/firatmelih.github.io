@@ -1,0 +1,80 @@
+@import "vars";
+@import "@fontsource/open-sauce-one/300.css";
+@import "@fontsource/open-sauce-one/400.css";
+@import "@fontsource/open-sauce-one/500.css";
+@import "@fontsource/open-sauce-one/600.css";
+@import "@fontsource/open-sauce-one/700.css";
+@import "@fontsource/open-sauce-one/800.css";
+@import "@fontsource/open-sauce-one/900.css";
+
+:root {
+  font-family: "Open Sauce One", sans-serif;
+  --h1: 5rem;
+  --h2: 3rem;
+  --h3: 2.5rem;
+  --h4: 2.3rem;
+  --h5: 2rem;
+  --p: 1rem;
+  --sm: 1.2rem;
+
+  @include below("tablet") {
+    --h1: 1.7rem;
+    --h2: 1.7rem;
+    --h3: 2.5rem;
+    --h4: 2.3rem;
+    --h5: 1rem;
+    --p: 1rem;
+  }
+
+  h1, h2, h3, h4, h5, p, span, ul, li {
+    margin: 0;
+
+    &[data-gradient="true"] {
+      background: -webkit-linear-gradient(180deg, $color-green, $color-blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @each $name, $color in $text-color-variants {
+      &[data-color=#{$name}] {
+        color: #{$color};
+      }
+    }
+    @each $name, $weight in $font-weight-variants {
+      &[data-weight=#{$name}] {
+        font-weight: $weight;
+      }
+    }
+
+    @each $name in $font-size-variants {
+      &[data-font-size=#{$name}] {
+        font-size: var(--#{$name});
+      }
+    }
+
+  }
+
+  h1 {
+    font-size: var(--h1);
+  }
+
+  h2 {
+    font-size: var(--h2);
+  }
+
+  h3 {
+    font-size: var(--h3);
+  }
+
+  h4 {
+    font-size: var(--h4);
+  }
+
+  h5 {
+    font-size: var(--h5);
+  }
+
+  p {
+    font-size: var(--p);
+  }
+}

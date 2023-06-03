@@ -1,0 +1,51 @@
+@import "vars";
+@import "fonts";
+
+
+:root {
+  * {
+    box-sizing: border-box;
+
+  }
+}
+
+body {
+  padding: 0 25% !important;
+  @include below("fullhd") {
+    padding: 0 200px !important;
+  }
+  @include below("desktop") {
+    padding: 0 100px !important;
+  }
+  @include below("tablet") {
+    padding: 0 50px !important;
+  }
+  @include below("mobile") {
+    padding: 0 15px !important;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth !important;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  div, nav, section {
+    &[data-variant="glass"] {
+      // Stolen from >> Kanishk Kunal
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(10px);
+    }
+  }
+}

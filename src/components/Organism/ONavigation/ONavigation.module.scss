@@ -1,0 +1,77 @@
+@use "@/styles/vars" as *;
+
+.ONavigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 100px;
+
+  &__cell {
+    display: flex;
+    align-items: baseline;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: min-content;
+    padding: 0;
+    list-style: none;
+    gap: 8px;
+
+    &[data-variant="bar"] {
+      display: none;
+      @include below("tablet") {
+        display: block;
+        height: 32px !important;
+        cursor: pointer;
+      }
+    }
+
+    &[data-visible="true"] {
+      @include below("tablet") {
+        transform: translateX(0) !important;
+      }
+    }
+
+    &[data-variant="mobile"] {
+      transition: transform $easing $duration;
+      @include below("tablet") {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        transform: translateX(-300px);
+        background-color: white;
+      }
+    }
+
+
+    &[data-variant="logo"] {
+      font-family: Roboto;
+      cursor: pointer;
+    }
+
+    img {
+      background-color: black;
+    }
+
+
+    p {
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color $easing $duration;
+      border-radius: 99px;
+
+      &:hover {
+        background-color: rgba(218, 218, 218, 0.71);
+      }
+
+      p {
+      }
+    }
+  }
+}

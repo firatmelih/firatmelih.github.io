@@ -1,0 +1,55 @@
+@use "@/styles/vars" as *;
+
+.MWork {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    @include below("mobile") {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+  }
+
+  &__chip {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 99px;
+    background-color: green;
+
+    &:nth-child(1) {
+      color: black;
+      border: 1px solid black;
+      background-color: $white;
+    }
+
+    &:nth-child(2) {
+      background-color: $color-blue;
+    }
+
+    &:nth-child(3) {
+      background-color: black;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    gap: 50px;
+
+    img {
+      position: relative !important;
+      border-radius: 15px;
+    }
+  }
+}

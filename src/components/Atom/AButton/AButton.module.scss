@@ -1,0 +1,15 @@
+@use "@/styles/vars" as *;
+
+.AButton {
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: color $easing $duration, background-color $easing $duration;
+  border: 1px solid black;
+  border-radius: 99px;
+  background-color: transparent;
+
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+}
