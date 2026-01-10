@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon" href="/apple.png"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="Melih Firat - Portfolio showcasing projects, skills, and experience in software development"/>
+    <meta name="keywords" content="Melih Firat, portfolio, software developer, web developer, developer portfolio"/>
+    <meta property="og:title" content="Melih Firat Portfolio"/>
+    <meta property="og:description" content="Melih Firat - Portfolio showcasing projects, skills, and experience in software development"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Melih Firat Portfolio"/>
+    <meta name="twitter:description" content="Melih Firat - Portfolio showcasing projects, skills, and experience in software development"/>
+    <link href="/src/style.css" rel="stylesheet">
+    <title>Melih Firat Portfolio</title>
+    <script>
+        // Polyfill for browser extension API compatibility
+        // Prevents "browser is not defined" errors from browser extensions
+        if (typeof browser === 'undefined' && typeof chrome !== 'undefined') {
+            window.browser = chrome;
+        } else if (typeof browser === 'undefined') {
+            window.browser = {
+                runtime: {
+                    onMessage: { addListener: () => {}, removeListener: () => {} },
+                    sendMessage: () => Promise.resolve()
+                },
+                storage: {
+                    local: { get: () => Promise.resolve({}), set: () => Promise.resolve() },
+                    sync: { get: () => Promise.resolve({}), set: () => Promise.resolve() }
+                },
+                tabs: {
+                    query: () => Promise.resolve([]),
+                    sendMessage: () => Promise.resolve()
+                }
+            };
+        }
+    </script>
+  <script type="module" crossorigin src="/assets/index-Dag0KTLz.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-VRpPOWkA.css">
+</head>
+<body>
+<div id="root"></div>
+</body>
+</html>
