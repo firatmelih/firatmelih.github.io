@@ -1,46 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
-    <link rel="apple-touch-icon" href="/apple.png"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta name="description" content="Melih Firat - Portfolio showcasing projects, skills, and experience in software development"/>
-    <meta name="keywords" content="Melih Firat, portfolio, software developer, web developer, developer portfolio"/>
-    <meta property="og:title" content="Melih Firat Portfolio"/>
-    <meta property="og:description" content="Melih Firat - Portfolio showcasing projects, skills, and experience in software development"/>
-    <meta property="og:type" content="website"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Melih Firat Portfolio"/>
-    <meta name="twitter:description" content="Melih Firat - Portfolio showcasing projects, skills, and experience in software development"/>
-    <link href="/src/style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Melih Firat" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple.png" />
+    <link rel="canonical" href="https://firatmelih.github.io" />
+    <meta
+      name="description"
+      content="Melih Firat's personal website with his projects, tech stack, curriculum and more."
+    />
+    <meta
+      name="keywords"
+      content="Melih Firat, portfolio, software engineer, web developer, engineer portfolio"
+    />
+    <meta property="og:title" content="Melih Firat | Software Developer" />
+    <meta
+      property="og:description"
+      content="Melih Firat's personal website with his projects, tech stack, curriculum and more."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://firatmelih.github.io" />
+    <meta property="og:site_name" content="Melih Firat Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:image"
+      content="https://firatmelih.github.io/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Melih Firat Portfolio - Software Developer"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://firatmelih.github.io/summary_large_image.png"
+    />
+    <meta name="twitter:title" content="Melih Firat | Software Developer" />
+    <meta
+      name="twitter:description"
+      content="Melih Firat's personal website with his projects, tech stack, curriculum and more."
+    />
     <title>Melih Firat Portfolio</title>
     <script>
-        // Polyfill for browser extension API compatibility
-        // Prevents "browser is not defined" errors from browser extensions
-        if (typeof browser === 'undefined' && typeof chrome !== 'undefined') {
-            window.browser = chrome;
-        } else if (typeof browser === 'undefined') {
-            window.browser = {
-                runtime: {
-                    onMessage: { addListener: () => {}, removeListener: () => {} },
-                    sendMessage: () => Promise.resolve()
-                },
-                storage: {
-                    local: { get: () => Promise.resolve({}), set: () => Promise.resolve() },
-                    sync: { get: () => Promise.resolve({}), set: () => Promise.resolve() }
-                },
-                tabs: {
-                    query: () => Promise.resolve([]),
-                    sendMessage: () => Promise.resolve()
-                }
-            };
+      // Polyfill for browser extension API compatibility
+      // Prevents "browser is not defined" errors from browser extensions
+      if (typeof browser === 'undefined' && typeof chrome !== 'undefined') {
+        window.browser = chrome
+      } else if (typeof browser === 'undefined') {
+        window.browser = {
+          runtime: {
+            onMessage: { addListener: () => {}, removeListener: () => {} },
+            sendMessage: () => Promise.resolve(),
+          },
+          storage: {
+            local: {
+              get: () => Promise.resolve({}),
+              set: () => Promise.resolve(),
+            },
+            sync: {
+              get: () => Promise.resolve({}),
+              set: () => Promise.resolve(),
+            },
+          },
+          tabs: {
+            query: () => Promise.resolve([]),
+            sendMessage: () => Promise.resolve(),
+          },
         }
+      }
     </script>
-  <script type="module" crossorigin src="/assets/index-BztGo2sP.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-GLHalMhc.css">
-</head>
-<body>
-<div id="root"></div>
-</body>
+    <script type="module" crossorigin src="/assets/index-BztGo2sP.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-GLHalMhc.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
